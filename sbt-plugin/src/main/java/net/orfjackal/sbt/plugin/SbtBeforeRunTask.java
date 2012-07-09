@@ -5,9 +5,15 @@
 package net.orfjackal.sbt.plugin;
 
 import com.intellij.execution.BeforeRunTask;
+import com.intellij.openapi.util.Key;
 import org.jdom.Element;
+import org.jetbrains.annotations.NotNull;
 
-public class SbtBeforeRunTask extends BeforeRunTask {
+public class SbtBeforeRunTask extends BeforeRunTask<SbtBeforeRunTask> {
+
+    public SbtBeforeRunTask(@NotNull Key<SbtBeforeRunTask> providerId) {
+        super(providerId);
+    }
 
     private String action;
     private boolean runInCurrentModule;
