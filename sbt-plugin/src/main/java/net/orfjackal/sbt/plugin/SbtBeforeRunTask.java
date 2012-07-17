@@ -13,6 +13,8 @@ public class SbtBeforeRunTask extends BeforeRunTask<SbtBeforeRunTask> {
 
     public SbtBeforeRunTask(@NotNull Key<SbtBeforeRunTask> providerId) {
         super(providerId);
+        runInCurrentModule = true;
+        action = "test:products";
     }
 
     private String action;

@@ -52,12 +52,12 @@ public class SbtBeforeRunTaskProvider extends BeforeRunTaskProvider<SbtBeforeRun
 
     // Leda
     public String getDescription(SbtBeforeRunTask sbtBeforeRunTask) {
-        return "Run SBT Action";
+        return "sbt " + sbtBeforeRunTask.getAction();
     }
 
     // Leda
     public boolean isConfigurable() {
-        return false;
+        return true;
     }
 
     // Leda
@@ -70,10 +70,6 @@ public class SbtBeforeRunTaskProvider extends BeforeRunTaskProvider<SbtBeforeRun
         return desc == null
                 ? MessageBundle.message("sbt.tasks.before.run.empty")
                 : MessageBundle.message("sbt.tasks.before.run", desc);
-    }
-
-    public boolean hasConfigurationButton() {
-        return true;
     }
 
     public SbtBeforeRunTask createTask(RunConfiguration runConfiguration) {
