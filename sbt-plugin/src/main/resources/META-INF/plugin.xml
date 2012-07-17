@@ -74,9 +74,11 @@
     <project-components>
         <component>
             <implementation-class>net.orfjackal.sbt.plugin.SbtRunnerComponent</implementation-class>
+            <loadForDefaultProject/>
         </component>
         <component>
             <implementation-class>net.orfjackal.sbt.plugin.settings.SbtProjectSettingsComponent</implementation-class>
+            <loadForDefaultProject/>
         </component>
     </project-components>
 
