@@ -61,7 +61,7 @@ public class SbtConsole {
     }
 
     private static ConsoleView createConsoleView(Project project) {
-        if (!SystemInfo.isWindows || "true".equalsIgnoreCase(System.getProperty("idea.sbt.plugin.langconsole"))) {
+        if (!"true".equalsIgnoreCase(System.getProperty("idea.sbt.plugin.classic"))) {
             return createLanguageConsole(project);
         } else {
             return createTextConsole(project);
