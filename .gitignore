@@ -3,3 +3,4 @@
 classes
 *.iws
 profiles.xml
+.idea/scopes
